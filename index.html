@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>binger barcode — Privacy Policy</title>
+<title>bingus barcode Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -24,63 +24,54 @@
 </style>
 </head>
 <body>
-<h1>binger barcode — Privacy Policy</h1>
-<p class="updated">Last updated: 2026-06-03</p>
-
-<p><strong>binger barcode</strong> ("the app") is an unofficial utility that
-displays your recreation center entry barcode. This policy explains what the app
-does and does not do with your data.</p>
-
+<h1>bingus barcode Privacy Policy</h1>
+<p class="updated">Last updated: 2026-10-03</p>
+<p>bingus barcode ("the app") is an independent, unofficial utility that displays your university recreation-center entry barcode. The developer runs <strong>no servers of their own</strong> and receives <strong>none</strong> of your data. This policy explains, plainly, what the app stores on your device and what it sends, and to whom.</p>
 <h2>Summary</h2>
-<p>binger barcode does <strong>not</strong> operate any servers of its own and
-does <strong>not</strong> collect, transmit, sell, or share your personal
-information with the developer or any third party. All authentication happens
-directly between your device and your school's existing recreation/identity
-provider.</p>
-
-<h2>What the app stores</h2>
 <ul>
-  <li><strong>Session token.</strong> When you log in, the app receives a session
-  token from your school's recreation system. This token is stored
-  <strong>only on your device</strong>, in encrypted storage (Android Jetpack
-  Security / EncryptedSharedPreferences). It is used solely to request your
-  current entry barcode.</li>
-  <li>The app does <strong>not</strong> store your username or password. Login
-  credentials are entered into your school's own web login page shown inside the
-  app and are handled by that provider, not by binger barcode.</li>
+  <li>To keep you signed in, the app stores your <strong>university NetID and password</strong> and your session token/cookies <strong>encrypted on your device only</strong>.</li>
+  <li>It sends your NetID and password <strong>only to your university's own login service</strong> (UC Riverside CAS, <code>auth.ucr.edu</code>) to sign you in, and sends the resulting session token <strong>only to the recreation system</strong> (<code>innosoftfusiongo.com</code>) to fetch your barcode.</li>
+  <li>Nothing is ever sent to the developer or to any analytics, advertising, or third-party service.</li>
+  <li>The app works only with UC Riverside recreation accounts.</li>
 </ul>
-
-<h2>What the app transmits</h2>
+<h2>What the app stores on your device</h2>
+<p>All of the following are stored <strong>only on your device</strong>: on Android in Android Keystore-backed encrypted storage (Jetpack Security <code>EncryptedSharedPreferences</code>), on iPhone in the iOS Keychain (this device only, never synced to iCloud). None of it is transmitted to the developer or any third party, and none is included in cloud backup or device-to-device transfer.</p>
 <ul>
-  <li>The app sends your session token to your school's recreation API
-  (<code>innosoftfusiongo.com</code>) only to retrieve your current barcode
-  value. No data is sent anywhere else.</li>
+  <li><strong>Your UCR NetID and password.</strong> The app stores these so it can sign you back in automatically when your session expires, instead of making you log in repeatedly. They are used <strong>only</strong> to authenticate to UCR's own CAS login.</li>
+  <li><strong>Session token and SSO cookies.</strong> Short-lived credentials the login returns, used to request your current barcode.</li>
+  <li><strong>Session timestamps.</strong> When your session token was last issued and last accepted, plus whether you are signed in. These contain no token, password or personal data; the app uses them only to open faster (to know when a sign-in will be needed). They are kept in ordinary app storage on the device, are also excluded from backup, and are deleted with Log out.</li>
 </ul>
-
-<h2>What the app does not do</h2>
+<p>You can remove all of the above at any time with <strong>Log out</strong> (see Data deletion).</p>
+<h2>What the app transmits, and to whom</h2>
+<ul>
+  <li><strong>To <code>auth.ucr.edu</code> (UC Riverside's login service):</strong> your NetID and password, to sign in — exactly as if you typed them into UCR's login page. This happens the first time you log in and automatically when your session later expires.</li>
+  <li><strong>To <code>innosoftfusiongo.com</code> (the recreation system):</strong> your session token, to retrieve your current entry barcode.</li>
+</ul>
+<p>All network traffic uses HTTPS. No data is sent anywhere else, and nothing goes to the developer.</p>
+<h2>What the app does NOT do</h2>
 <ul>
   <li>No analytics, advertising, tracking, or third-party SDKs.</li>
   <li>No collection of contacts, location, photos, or device identifiers.</li>
   <li>No accounts, profiles, or cloud storage operated by the developer.</li>
+  <li>Release builds write <strong>no</strong> diagnostic log file. (Developer debug builds may write a local troubleshooting log to the app's private storage; those builds are not distributed.)</li>
 </ul>
-
+<h2>Demo mode</h2>
+<p>The app includes a demo mode that shows a sample (fake) barcode with no login and no network access, so you can preview the app without an account.</p>
 <h2>Data deletion</h2>
-<p>Use <strong>Log out</strong> in the app to immediately delete the stored
-token from your device. Uninstalling the app also removes all stored data.</p>
-
+<ul>
+  <li><strong>Log out</strong> inside the app immediately deletes your stored NetID, password, session token, and SSO cookies from the device.</li>
+  <li><strong>Uninstalling</strong> the app removes all stored data. (On iPhone, where the Keychain can outlive an uninstall, the app deletes any leftover sign-in data the first time it is opened after a reinstall.)</li>
+</ul>
 <h2>Permissions</h2>
 <ul>
-  <li><strong>Internet / Network state</strong> — required to retrieve your
-  barcode.</li>
+  <li><strong>Internet / Network state</strong> — required to sign in and retrieve your barcode, and to retry as soon as your connection comes back.</li>
 </ul>
-
+<p>The optional Quick Settings tile (Android) and the Siri / Shortcuts action (iPhone) only open the app; they read and send nothing.</p>
+<h2>A note on your credentials</h2>
+<p>Because the app stores your UCR password to keep you signed in, treat it like any app that holds a password: only install it on a device you control. If you change your UCR password, open the app and log in once to update the stored copy. Your credentials are only ever sent to UCR's own login service.</p>
 <h2>Affiliation</h2>
-<p>binger barcode is an independent project and is not affiliated with, endorsed
-by, or sponsored by UC Riverside or Innosoft. All trademarks belong to their
-respective owners.</p>
-
+<p>bingus barcode is an independent project and is <strong>not</strong> affiliated with, endorsed by, or sponsored by UC Riverside or Innosoft. All trademarks belong to their respective owners.</p>
 <h2>Contact</h2>
-<p>For questions about this policy, contact:
-<a href="mailto:jstruv@gmail.com">jstruv@gmail.com</a></p>
+<p>For questions about this policy, contact: <a href="mailto:jstruv@gmail.com">jstruv@gmail.com</a></p>
 </body>
 </html>
